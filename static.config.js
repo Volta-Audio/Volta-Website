@@ -28,6 +28,7 @@ export default {
   plugins: [
     "react-static-plugin-typescript",
     "react-static-plugin-styled-components",
+    "react-static-plugin-svg",
     [
       require.resolve("react-static-plugin-source-filesystem"),
       {
