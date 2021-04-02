@@ -6,6 +6,8 @@ const theme = {
       roseBud: "#9C155A",
       black: "#232323",
       white: "#FFFFFF",
+      hover: "#EB5BA5",
+      active: "#D2428C"
     },
     secondary: {
       darkGrey: "#505050",
