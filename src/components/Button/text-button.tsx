@@ -26,27 +26,6 @@ const VoltaButton = styled.div`
   &:active {
     background-color: ${({ theme: { colours } }) => colours.primary.active};
   }
-  &:focus {
-    border: 4px solid ${({ theme: { colours } }) => colours.primary.white};
-    outline: none;
-  }
-`
-
-const BorderWrapper = styled.div`
-  display: flex;
-  grid-column-start: 3;
-  grid-column-end: 7;
-  height: 78px;
-  border-radius: 52px;
-  align-items: center;
-  background-color: ${({ theme: { colours } }) => colours.primary.lightPink};
-  padding: 4px;
-  &:hover {
-    background-color: ${({ theme: { colours } }) => colours.primary.hover};
-  }
-  &:active {
-    background-color: ${({ theme: { colours } }) => colours.primary.active};
-  }
 `
 
 const TextButton = ({ onClick, text, to }: TextButtonProps) => {
@@ -58,13 +37,16 @@ const TextButton = ({ onClick, text, to }: TextButtonProps) => {
     </>
   )
   return onClick ? (
-    <BorderWrapper>
-      <VoltaButton onClick={onClick}>{contents}</VoltaButton>
-    </BorderWrapper>
+    <VoltaButton
+      onClick={onClick}
+      role="button"
+      aria-pressed="true"
+      tabIndex={0}
+    >
+      {contents}
+    </VoltaButton>
   ) : (
-    <BorderWrapper>
-      <Link to={to}>{contents}</Link>
-    </BorderWrapper>
+    <Link to={to}>{contents}</Link>
   )
 }
 

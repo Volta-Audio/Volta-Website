@@ -8,36 +8,16 @@ interface ArrowButtonProps {
   to?: string
 }
 
-const VoltaButton = styled.div`
+const VoltaButton = styled.button`
   display: flex;
-  flex: 1;
+  border: none;
   align-items: center;
   justify-content: center;
-  height: 32px;
+  height: 38px;
   width: 103px;
   border-radius: 48px;
   background-color: ${({ theme: { colours } }) => colours.primary.lightPink};
   padding 0 40px;
-  &:hover {
-    background-color: ${({ theme: { colours } }) => colours.primary.hover};
-  }
-  &:active {
-    background-color: ${({ theme: { colours } }) => colours.primary.active};
-  }
-  &:focus {
-    border: 4px solid ${({ theme: { colours } }) => colours.primary.white};
-    outline: none;
-  }
-`
-
-const BorderWrapper = styled.div`
-  display: flex;
-  height: 38px;
-  border-radius: 48px;
-  width: 103px;
-  align-items: center;
-  background-color: ${({ theme: { colours } }) => colours.primary.lightPink};
-  padding: 4px;
   &:hover {
     background-color: ${({ theme: { colours } }) => colours.primary.hover};
   }
@@ -53,13 +33,11 @@ const ArrowButton = ({ onClick, to }: ArrowButtonProps) => {
   if (!onClick && !to) return null
   const contents = <img style={{ width: "27px" }} src={arrow} />
   return onClick ? (
-    <BorderWrapper>
-      <VoltaButton onClick={onClick}>{contents}</VoltaButton>
-    </BorderWrapper>
+    <VoltaButton onClick={onClick} role="button" tabIndex={0} type="submit">
+      {contents}
+    </VoltaButton>
   ) : (
-    <BorderWrapper>
-      <Link to={to}>{contents}</Link>
-    </BorderWrapper>
+    <Link to={to}>{contents}</Link>
   )
 }
 
