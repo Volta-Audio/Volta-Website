@@ -8,20 +8,14 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'NHaasGroteskDSStd-95Blk';
     src: url(../fonts/NeueHaasGroteskDisplayStd/NHaasGroteskDSStd-95Blk.otf) format('opentype');
-    /* other formats include: 'woff2', 'truetype, 'opentype',
-                              'embedded-opentype', and 'svg' */
   }
   @font-face {
     font-family: 'NHaasGroteskDSStd-75Bd';
     src: url(../fonts/NeueHaasGroteskDisplayStd/NHaasGroteskDSStd-75Bd.otf) format('opentype');
-    /* other formats include: 'woff2', 'truetype, 'opentype',
-                              'embedded-opentype', and 'svg' */
   }
   @font-face {
     font-family: 'NHaasGroteskDSStd-45L';
     src: url(../fonts/NeueHaasGroteskDisplayStd/NHaasGroteskDSStd-45L.otf) format('opentype');
-    /* other formats include: 'woff2', 'truetype, 'opentype',
-                              'embedded-opentype', and 'svg' */
   }
   body {
     font-family: 'NHaasGroteskDSStd-45L', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',

@@ -7,6 +7,7 @@ interface GridProps {
 
 const VoltaGrid = styled.div`
   margin: 0 auto;
+  height: 100%;
   ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     display: grid;
     width: 1110px;
@@ -16,15 +17,14 @@ const VoltaGrid = styled.div`
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     padding: ${({ theme: { spacing } }) => spacing.small};
     padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 `
 
 const Grid = ({ children }: GridProps) => {
-  return (
-    <div>
-      <VoltaGrid>{children}</VoltaGrid>
-    </div>
-  )
+  return <VoltaGrid>{children}</VoltaGrid>
 }
 
 export default Grid
