@@ -8,6 +8,7 @@ import * as insta from "../icons/insta.png"
 import Grid from "./grid"
 
 const Container = styled.div`
+  text-align: center;
   background-color: ${({ theme: { colours } }) => colours.primary.black};
   height: 200px;
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {

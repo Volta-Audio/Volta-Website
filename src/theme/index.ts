@@ -16,8 +16,8 @@ const theme = {
     },
   },
   breakpoints: {
-    mobile: "@media only screen and (max-width: 575px)",
-    desktop: "@media only screen and (min-width: 576px)",
+    mobile: "@media only screen and (max-width: 767px)",
+    desktop: "@media only screen and (min-width: 768px)",
   },
   text: {
     smallFont: "12px",

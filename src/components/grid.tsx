@@ -10,8 +10,8 @@ const VoltaGrid = styled.div`
   height: 100%;
   ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     display: grid;
-    width: 1110px;
-    grid-template-columns: repeat(12, 65px);
+    max-width: 1110px;
+    grid-template-columns: repeat(12, 1fr);
     gap: 30px;
   }
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {

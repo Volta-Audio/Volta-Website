@@ -1,7 +1,8 @@
 import React from "react"
+import Hero from "containers/Hero"
 
 export default () => (
-  <div style={{ textAlign: "center" }}>
-    <h1>Volta XR</h1>
+  <div id="index" style={{ textAlign: "center" }}>
+    <Hero />
   </div>
 )

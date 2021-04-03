@@ -17,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'NHaasGroteskDSStd-45L';
     src: url(../fonts/NeueHaasGroteskDisplayStd/NHaasGroteskDSStd-45L.otf) format('opentype');
   }
+  @font-face {
+    font-family: 'SharpGrotesk-Bold25';
+    src: url(../fonts/SharpGrotesk-Bold25/SharpGrotesk-Bold25.otf) format('opentype');
+  }
   body {
     font-family: 'NHaasGroteskDSStd-45L', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
     Helvetica, Arial, 'Lucida Grande', sans-serif;
