@@ -3,6 +3,7 @@ import { Root, Routes } from "react-static"
 import { Link, Router } from "@reach/router"
 import { ThemeProvider } from "styled-components"
 
+import Footer from "components/footer"
 import theme from "./theme"
 import GlobalStyle from "./theme/global"
 
@@ -21,6 +22,7 @@ function App() {
             </Router>
           </React.Suspense>
         </div>
+        <Footer />
       </ThemeProvider>
     </Root>
   )
