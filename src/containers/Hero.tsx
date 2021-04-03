@@ -2,9 +2,20 @@ import React from "react"
 import styled from "styled-components"
 import hero from "../videos/hero.mp4"
 import circleIcon from "../icons/circlevolta.png"
+import { VoltaGrid } from "../theme/components"
+
+const StyledGrid = styled(VoltaGrid)`
+  ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    padding: ${({ theme: { spacing } }) => spacing.small};
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+`
 
 const Video = styled.video`
   z-index: -1;
+  overflow: hidden;
   ${({ theme: { breakpoints } }) => breakpoints.desktop} {
     width: 100%;
     position: fixed:
@@ -26,7 +37,6 @@ const CircleIcon = styled.img`
   grid-column: 1/3;
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {
     margin-top: 32px;
-    margin-left: 32px;
   }
 `
 
@@ -35,24 +45,8 @@ const Wrapper = styled.div`
   height: auto,
   overflow: hidden;
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    overflow: hidden;
     height: 726px;
-  }
-`
-
-const VoltaGrid = styled.div`
-  margin: 0 auto;
-  height: 100%;
-  ${({ theme: { breakpoints } }) => breakpoints.desktop} {
-    display: grid;
-    max-width: 1110px;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
-  }
-  ${({ theme: { breakpoints } }) => breakpoints.mobile} {
-    padding: ${({ theme: { spacing } }) => spacing.small};
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: column;
   }
 `
 
@@ -85,10 +79,10 @@ const Hero = () => {
         <source src={hero} type="video/mp4" />
       </Video>
       <ContentOverlay>
-        <VoltaGrid>
+        <StyledGrid>
           <CircleIcon src={circleIcon} alt="Volta" />
           <VoltaLogo>VOLTA</VoltaLogo>
-        </VoltaGrid>
+        </StyledGrid>
       </ContentOverlay>
     </Wrapper>
   )

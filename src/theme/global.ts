@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 2px;
     margin: 0;
     padding: 0;
+    background-color: #000000;
   }
   a {
     text-decoration: none;
