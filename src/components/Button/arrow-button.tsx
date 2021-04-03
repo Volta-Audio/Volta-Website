@@ -27,6 +27,10 @@ const VoltaButton = styled.button`
   &:focus {
     outline: none;
   }
+  ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    width: 38px;
+    padding: 0;
+  }
 `
 
 const ArrowButton = ({ onClick, to }: ArrowButtonProps) => {

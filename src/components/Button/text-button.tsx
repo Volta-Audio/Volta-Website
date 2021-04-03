@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "@reach/router"
+// import { Link } from "@reach/router"
 import * as arrow from "../../icons/button_arrow.png"
 
 interface TextButtonProps {
@@ -28,6 +28,10 @@ const VoltaButton = styled.div`
   }
 `
 
+const StyledA = styled.a`
+  flex: 1;
+`
+
 const TextButton = ({ onClick, text, to }: TextButtonProps) => {
   if (!onClick && !to) return null
   const contents = (
@@ -46,7 +50,11 @@ const TextButton = ({ onClick, text, to }: TextButtonProps) => {
       {contents}
     </VoltaButton>
   ) : (
-    <Link to={to}>{contents}</Link>
+    <StyledA href={to}>
+      <VoltaButton role="button" aria-pressed="true" tabIndex={0}>
+        {contents}
+      </VoltaButton>
+    </StyledA>
   )
 }
 

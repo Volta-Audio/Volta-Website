@@ -21,6 +21,9 @@ const StyledInput = styled.input`
   flex-grow: 1;
   height: 100%;
   margin-right: 16px;
+  padding: 0;
+  padding-left: 24px;
+  border-radius: 4px;
   font-size: ${({ theme: { text } }) => text.smallFont}
   line-height: ${({ theme: { text } }) => text.smallLineHeight}
 `
