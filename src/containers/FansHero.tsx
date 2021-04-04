@@ -1,6 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { VoltaGrid } from "../theme/components"
+import background from "../images/Max2.jpg"
+
+const Wrapper = styled.div`
+  background-image: url(${background});
+  background-size: cover;
+  background-position: center;
+  height: 761px;
+  overflow: hidden;
+`
 
 const StyledGrid = styled(VoltaGrid)`
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -23,11 +32,11 @@ const ForFans = styled.h1`
 
 const FansHero = () => {
   return (
-    <div>
+    <Wrapper>
       <StyledGrid>
         <ForFans>FOR FANS</ForFans>
       </StyledGrid>
-    </div>
+    </Wrapper>
   )
 }
 

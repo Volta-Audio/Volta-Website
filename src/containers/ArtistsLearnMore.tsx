@@ -1,6 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { VoltaGrid } from "../theme/components"
+import background from "../images/Max2.jpg"
+
+const Wrapper = styled.div`
+  text-align: right;
+  padding-top: 120px;
+`
 
 const StyledGrid = styled(VoltaGrid)`
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -14,6 +20,7 @@ const StyledGrid = styled(VoltaGrid)`
 const Heading = styled.h3`
   grid-column: 2/6;
   text-align: left;
+  margin-top: 64px;
   color: ${({ theme: { colours } }) => colours.primary.white};
 `
 
@@ -24,9 +31,17 @@ const Sub = styled.p`
   color: ${({ theme: { colours } }) => colours.primary.white};
 `
 
+const Image = styled.img`
+  width: 90%;
+  ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    width: calc(100% - 32px);
+  }
+`
+
 const ArtistsLearnMore = () => {
   return (
-    <div>
+    <Wrapper>
+      <Image src={background} />
       <StyledGrid>
         <Heading>Tools that enable an artist to just plug and play</Heading>
         <Sub>
@@ -34,7 +49,7 @@ const ArtistsLearnMore = () => {
           eiusmod tempor incididunt ut labore et dolore magna
         </Sub>
       </StyledGrid>
-    </div>
+    </Wrapper>
   )
 }
 

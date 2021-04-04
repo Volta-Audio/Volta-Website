@@ -2,6 +2,11 @@ import React from "react"
 import SignupInput from "components/SignupInput"
 import styled from "styled-components"
 import { VoltaGrid } from "../theme/components"
+import background from "../images/Max2.jpg"
+
+const Wrapper = styled.div`
+  text-align: left;
+`
 
 const StyledGrid = styled(VoltaGrid)`
   ${({ theme: { breakpoints } }) => breakpoints.mobile} {
@@ -44,9 +49,18 @@ const Sub = styled.body`
   line-height: ${({ theme: { text } }) => text.smallLineHeight};
 `
 
+const Image = styled.img`
+  width: 65%;
+  margin-top: 102px;
+  ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    width: calc(100% - 32px);
+  }
+`
+
 const ArtistsRequestAccess = () => {
   return (
-    <div>
+    <Wrapper>
+      <Image src={background} />
       <StyledGrid>
         <Heading>
           Get Volta and start creating and performing in your own universe
@@ -60,7 +74,7 @@ const ArtistsRequestAccess = () => {
           <SignupInput />
         </InputWrapper>
       </StyledGrid>
-    </div>
+    </Wrapper>
   )
 }
 
