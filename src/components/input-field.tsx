@@ -4,6 +4,7 @@ import ArrowButton from "./Button/arrow-button"
 
 interface InputFieldProps {
   placeholder: string
+  onClick: (inputValue: string) => void
 }
 
 const FieldContaier = styled.div`
@@ -28,9 +29,8 @@ const StyledInput = styled.input`
   line-height: ${({ theme: { text } }) => text.smallLineHeight}
 `
 
-const InputField = ({ placeholder }: InputFieldProps) => {
+const InputField = ({ onClick, placeholder }: InputFieldProps) => {
   const [value, setValue] = useState("")
-
   const onChange = ({
     currentTarget: { value },
   }: FormEvent<HTMLInputElement>) => setValue(value)
@@ -39,6 +39,7 @@ const InputField = ({ placeholder }: InputFieldProps) => {
 
   const onSubmit = (e?: any) => {
     e && e.preventDefault()
+    onClick(value)
     clearForm()
   }
 

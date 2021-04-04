@@ -1,6 +1,6 @@
-import InputField from "components/input-field"
 import React from "react"
 import styled from "styled-components"
+import SignupInput from "components/SignupInput"
 import { VoltaGrid } from "../theme/components"
 
 const Wrapper = styled.div`
@@ -59,7 +59,7 @@ const NewsletterSignup = () => {
           eiusmod tempor incididunt ut
         </Sub>
         <InputWrapper>
-          <InputField placeholder="Please enter your email" />
+          <SignupInput />
         </InputWrapper>
       </StyledGrid>
     </Wrapper>

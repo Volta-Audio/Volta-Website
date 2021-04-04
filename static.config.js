@@ -1,5 +1,8 @@
 import axios from "axios"
 import path from "path"
+import dotenv from "dotenv"
+
+dotenv.config({ path: path.resolve(process.cwd(), ".env") })
 
 // Typescript support in static.config.js is not yet supported, but is coming in a future update!
 
