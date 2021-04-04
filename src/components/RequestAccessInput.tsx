@@ -7,9 +7,9 @@ const checkValidEmail = (email: string): boolean => {
   return re.test(email)
 }
 
-const SignupInput = () => {
+const RequestAccessInput = () => {
   const [responseText, setResponseText] = useState(undefined)
-  const NEWSLETTER_SIGNUP_LIST_ID = 3
+  const REQUEST_ACCESS_LIST_ID = 4
 
   const signUp = (email: string) => {
     checkValidEmail(email)
@@ -22,16 +22,14 @@ const SignupInput = () => {
           },
           url: "https://api.sendinblue.com/v3/contacts",
           data: {
-            listIds: [NEWSLETTER_SIGNUP_LIST_ID],
+            listIds: [REQUEST_ACCESS_LIST_ID],
             updateEnabled: true,
             email,
           },
         })
           .then(function (response) {
             if (response.status === 201 || response.status === 204) {
-              setResponseText(
-                "You've successfully added your email to the list!"
-              )
+              setResponseText("Request successful, we'll be in touch soon")
             }
           })
           .catch(function (_) {
@@ -50,4 +48,4 @@ const SignupInput = () => {
   )
 }
 
-export default SignupInput
+export default RequestAccessInput

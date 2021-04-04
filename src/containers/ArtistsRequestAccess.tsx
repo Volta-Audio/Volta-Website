@@ -1,5 +1,5 @@
-import TextButton from "components/Button/text-button"
 import React from "react"
+import SignupInput from "components/SignupInput"
 import styled from "styled-components"
 import { VoltaGrid } from "../theme/components"
 
@@ -18,9 +18,30 @@ const Heading = styled.h3`
   color: ${({ theme: { colours } }) => colours.primary.white};
 `
 
-const ButtonWrapper = styled.div`
-  grid-column: 2/6;
-  margin-bottom: 146px;
+const InputWrapper = styled.div`
+  grid-column: 2/12;
+  margin-bottom: 128px;
+  ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+    margin-bottom: 120px;
+  }
+`
+
+const HeaderTwo = styled.h4`
+  color: white;
+  text-align: left;
+  grid-column: 2/5;
+  margin-top: 112px;
+  margin-bottom: 0;
+  ${({ theme: { breakpoints } }) => breakpoints.mobile} {
+  }
+`
+
+const Sub = styled.body`
+  color: white;
+  text-align: left;
+  grid-column: 2/10;
+  font-size: ${({ theme: { text } }) => text.smallFont};
+  line-height: ${({ theme: { text } }) => text.smallLineHeight};
 `
 
 const ArtistsRequestAccess = () => {
@@ -30,9 +51,14 @@ const ArtistsRequestAccess = () => {
         <Heading>
           Get Volta and start creating and performing in your own universe
         </Heading>
-        <ButtonWrapper>
-          <TextButton text="Get Access" onClick={() => {}} />
-        </ButtonWrapper>
+        <HeaderTwo>Request Access</HeaderTwo>
+        <Sub>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut
+        </Sub>
+        <InputWrapper>
+          <SignupInput />
+        </InputWrapper>
       </StyledGrid>
     </div>
   )
