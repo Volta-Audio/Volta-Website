@@ -8,9 +8,9 @@ jobs:
     name: Deploy to gh-pages
     runs-on: ubuntu-latest
     steps:
+      - uses: ./
       - name: Install and build
         run: yarn build
-      - uses: ./
         env:
           SENDINBLUE_API_KEY: ${{secrets.SENDINBLUE_API_KEY}}
       - name: Deploy
