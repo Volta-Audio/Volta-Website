@@ -8,6 +8,7 @@ import FansHero from "containers/FansHero"
 import VoltaLiveLearnMore from "containers/VoltaLiveLearnMore"
 import OculusDownload from "containers/OculusDownload"
 import NewsletterSignup from "containers/NewsletterSignup"
+import UpcomingEvents from "containers/UpcomingEvents"
 import RecentPress from "containers/RecentPress"
 
 export default () => (
@@ -20,6 +21,7 @@ export default () => (
     <FansHero />
     <VoltaLiveLearnMore />
     <OculusDownload />
+    <UpcomingEvents />
     <RecentPress />
     <NewsletterSignup />
   </div>
