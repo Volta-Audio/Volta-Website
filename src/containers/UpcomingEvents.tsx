@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import hero from "../videos/hero.mp4"
+import test from "../videos/test.mp4"
 
 const Wrapper = styled.div`
   height: 822px;
@@ -68,7 +68,7 @@ const UpcomingEvents = () => {
       </Inner>
       <VideoWrapper>
         <Video autoPlay={true} loop={true} muted={true}>
-          <source src={hero} type="video/mp4" />
+          <source src={test} type="video/mp4" />
         </Video>
       </VideoWrapper>
       <Inner>
