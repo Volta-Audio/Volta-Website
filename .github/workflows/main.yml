@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install and build
-        uses: ./
         run: yarn build
+      - uses: ./
         env:
           SENDINBLUE_API_KEY: ${{secrets.SENDINBLUE_API_KEY}}
       - name: Deploy
