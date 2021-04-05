@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import test from "../videos/test.mp4"
+import test from "../icons/test.mp4"
 
 const Wrapper = styled.div`
   height: 822px;
