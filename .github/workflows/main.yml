@@ -8,7 +8,7 @@ jobs:
     name: Deploy to gh-pages
     runs-on: ubuntu-latest
     steps:
-      - uses: ./
+      - uses: actions/checkout@v2
       - name: Install and build
         run: yarn build
         env:
