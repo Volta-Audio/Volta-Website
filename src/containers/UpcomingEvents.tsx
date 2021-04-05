@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { VoltaGrid } from "../theme/components"
 import hero from "../videos/hero.mp4"
 
 const Wrapper = styled.div`
