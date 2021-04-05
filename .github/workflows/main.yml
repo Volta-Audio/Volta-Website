@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install and build
+      - name: Install
+        run: yarn global add react-static
+      - name: Build
         run: yarn build
         env:
           SENDINBLUE_API_KEY: ${{secrets.SENDINBLUE_API_KEY}}
